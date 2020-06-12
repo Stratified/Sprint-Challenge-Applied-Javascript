@@ -1,0 +1,14 @@
+    What is the DOM?
+The Document Object Model is the bridge between HTML and your browser.
+
+    What is an event?
+An action/function that fires off after a specific condition is met.
+
+    What is an event listener?
+An event listener specifies the action that fires off an event.
+
+    Why would we convert a NodeList into an Array?
+So that we can use array methods on it.
+
+    What is a component?
+A component is an independent and reusable piece of code.
