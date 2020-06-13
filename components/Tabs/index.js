@@ -9,16 +9,17 @@
 //    <div class="tab">topic here</div>
 
 const topicsDiv = document.querySelector("div.topics");
-const newTab = document.createElement("div");
-newTab.classList.add("tab");
 
 axios
   .get("https://lambda-times-backend.herokuapp.com/topics")
   .then((res) => {
-    console.log(`Resolved:`, res);
-    res.forEach((topic) => {
-      newTab.textContent = res.data.topics;
-      topicsDiv.appendChild(topic);
+    const topics = res.data.topics;
+
+    topics.forEach((topic) => {
+      const tab = document.createElement("div");
+      tab.classList.add("tab");
+      tab.textContent = topic;
+      topicsDiv.appendChild(tab);
     });
   })
   .catch((err) => {
